@@ -36,32 +36,27 @@ class MyApp extends StatelessWidget {
               })
             ],
           ),
-          body: ListView(
-            children: const <Widget>[
-              Text("Angga"),
-              Text(
-                "Angga",
-                style: TextStyle(fontSize: 50, fontStyle: FontStyle.italic),
-              ),
-              Text(
-                "Angga",
-                style: TextStyle(fontSize: 50, color: Colors.red),
-              ),
-              Text(
-                "Angga",
-                style: TextStyle(
-                    fontSize: 50,
-                    color: Colors.blue,
-                    decoration: TextDecoration.underline),
-              ),
-              Text(
-                "Angga",
-                style: TextStyle(
-                    fontSize: 50,
-                    color: Colors.yellow,
-                    fontWeight: FontWeight.bold),
-              ),
-            ],
+          body: Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: const <Widget>[
+                Icon(
+                  Icons.card_giftcard,
+                  size: 80,
+                  color: Colors.red,
+                ),
+                Icon(
+                  Icons.person,
+                  size: 70,
+                  color: Colors.orange,
+                ),
+                Icon(
+                  Icons.favorite,
+                  size: 80,
+                  color: Colors.green,
+                ),
+              ],
+            ),
           )),
     );
   }
