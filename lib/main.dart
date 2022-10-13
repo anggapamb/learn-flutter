@@ -37,19 +37,38 @@ class MyApp extends StatelessWidget {
           body: Container(
               margin: const EdgeInsets.all(20),
               child: ListView(
-                children: const <Widget>[
-                  Text("Image from url", style: TextStyle(fontSize: 25)),
-                  Image(
-                    image: NetworkImage(
-                        "https://cdn141.picsart.com/322275721385201.jpg"),
-                    width: 200,
-                    height: 200,
+                children: <Widget>[
+                  const Text("Material Button"),
+                  MaterialButton(
+                    onPressed: () {},
+                    color: Colors.green,
+                    child: const Text(
+                      "Button Biasa",
+                      style: TextStyle(color: Colors.white),
+                    ),
                   ),
-                  Text("Image from local", style: TextStyle(fontSize: 25)),
-                  Image(
-                    image: AssetImage("assets/girl.jpg"),
-                    width: 200,
-                    height: 200,
+                  MaterialButton(
+                    onPressed: () {},
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 20, vertical: 20),
+                    color: Colors.blue,
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20)),
+                    child: const Text("Button Rounded",
+                        style: TextStyle(color: Colors.white)),
+                  ),
+                  const Text("Floating Button"),
+                  FloatingActionButton(
+                    onPressed: () {},
+                    backgroundColor: Colors.red,
+                    child: const Icon(Icons.home),
+                  ),
+                  const Text("Icon Button"),
+                  IconButton(
+                    onPressed: () {},
+                    icon: Icon(Icons.save),
+                    iconSize: 50,
+                    color: Colors.orange,
                   )
                 ],
               ))),
