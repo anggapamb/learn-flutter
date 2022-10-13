@@ -35,13 +35,33 @@ class MyApp extends StatelessWidget {
             ],
           ),
           body: Container(
-            margin: const EdgeInsets.all(20),
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(40),
-              gradient: const LinearGradient(
+            decoration: const BoxDecoration(
+              gradient: LinearGradient(
                   begin: Alignment.topRight,
                   end: Alignment.bottomLeft,
                   colors: <Color>[Colors.yellow, Colors.red]),
+            ),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: const <Widget>[
+                Icon(
+                  Icons.settings,
+                  size: 50,
+                ),
+                Icon(
+                  Icons.woman,
+                  size: 80,
+                ),
+                Icon(
+                  Icons.woman,
+                  size: 80,
+                ),
+                Icon(
+                  Icons.settings,
+                  size: 50,
+                ),
+              ],
             ),
           )),
     );
