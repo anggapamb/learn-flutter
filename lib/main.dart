@@ -35,43 +35,15 @@ class MyApp extends StatelessWidget {
             ],
           ),
           body: Container(
-              margin: const EdgeInsets.all(20),
-              child: ListView(
-                children: <Widget>[
-                  const Text("Material Button"),
-                  MaterialButton(
-                    onPressed: () {},
-                    color: Colors.green,
-                    child: const Text(
-                      "Button Biasa",
-                      style: TextStyle(color: Colors.white),
-                    ),
-                  ),
-                  MaterialButton(
-                    onPressed: () {},
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: 20, vertical: 20),
-                    color: Colors.blue,
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(20)),
-                    child: const Text("Button Rounded",
-                        style: TextStyle(color: Colors.white)),
-                  ),
-                  const Text("Floating Button"),
-                  FloatingActionButton(
-                    onPressed: () {},
-                    backgroundColor: Colors.red,
-                    child: const Icon(Icons.home),
-                  ),
-                  const Text("Icon Button"),
-                  IconButton(
-                    onPressed: () {},
-                    icon: Icon(Icons.save),
-                    iconSize: 50,
-                    color: Colors.orange,
-                  )
-                ],
-              ))),
+            margin: const EdgeInsets.all(20),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(40),
+              gradient: const LinearGradient(
+                  begin: Alignment.topRight,
+                  end: Alignment.bottomLeft,
+                  colors: <Color>[Colors.yellow, Colors.red]),
+            ),
+          )),
     );
   }
 }
