@@ -41,8 +41,8 @@ class MyApp extends StatelessWidget {
                   end: Alignment.bottomLeft,
                   colors: <Color>[Colors.yellow, Colors.red]),
             ),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: const <Widget>[
                 Icon(
