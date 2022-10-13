@@ -36,24 +36,51 @@ class MyApp extends StatelessWidget {
               })
             ],
           ),
-          body: Center(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          body: Container(
+            margin: const EdgeInsets.all(15),
+            child: ListView(
               children: const <Widget>[
-                Icon(
-                  Icons.card_giftcard,
-                  size: 80,
-                  color: Colors.red,
+                TextField(),
+                SizedBox(height: 20),
+                TextField(
+                  maxLength: 20,
+                  decoration: InputDecoration(
+                      border: OutlineInputBorder(),
+                      icon: Icon(Icons.person),
+                      prefix: Text("yourName: "),
+                      prefixStyle: TextStyle(
+                        fontSize: 18,
+                        color: Colors.red,
+                      )),
                 ),
-                Icon(
-                  Icons.person,
-                  size: 70,
-                  color: Colors.orange,
+                SizedBox(height: 20),
+                TextField(
+                  maxLength: 20,
+                  maxLines: 5,
+                  keyboardType: TextInputType.multiline,
+                  decoration: InputDecoration(
+                    labelText: "Password",
+                    border: OutlineInputBorder(),
+                  ),
                 ),
-                Icon(
-                  Icons.favorite,
-                  size: 80,
-                  color: Colors.green,
+                SizedBox(height: 20),
+                TextField(
+                  maxLength: 20,
+                  obscureText: true,
+                  decoration: InputDecoration(
+                      hintText: "Your password",
+                      border: OutlineInputBorder(),
+                      prefixIcon: Icon(Icons.lock)),
+                ),
+                SizedBox(height: 20),
+                TextField(
+                  maxLength: 20,
+                  keyboardType: TextInputType.number,
+                  decoration: InputDecoration(
+                      prefixText: "Rp.",
+                      prefixStyle: TextStyle(color: Colors.red, fontSize: 18),
+                      border: OutlineInputBorder(),
+                      prefixIcon: Icon(Icons.attach_money)),
                 ),
               ],
             ),
