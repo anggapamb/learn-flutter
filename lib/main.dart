@@ -1,5 +1,3 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
 
 void main() {
@@ -37,54 +35,24 @@ class MyApp extends StatelessWidget {
             ],
           ),
           body: Container(
-            margin: const EdgeInsets.all(15),
-            child: ListView(
-              children: const <Widget>[
-                TextField(),
-                SizedBox(height: 20),
-                TextField(
-                  maxLength: 20,
-                  decoration: InputDecoration(
-                      border: OutlineInputBorder(),
-                      icon: Icon(Icons.person),
-                      prefix: Text("yourName: "),
-                      prefixStyle: TextStyle(
-                        fontSize: 18,
-                        color: Colors.red,
-                      )),
-                ),
-                SizedBox(height: 20),
-                TextField(
-                  maxLength: 20,
-                  maxLines: 5,
-                  keyboardType: TextInputType.multiline,
-                  decoration: InputDecoration(
-                    labelText: "Password",
-                    border: OutlineInputBorder(),
+              margin: const EdgeInsets.all(20),
+              child: ListView(
+                children: const <Widget>[
+                  Text("Image from url", style: TextStyle(fontSize: 25)),
+                  Image(
+                    image: NetworkImage(
+                        "https://cdn141.picsart.com/322275721385201.jpg"),
+                    width: 200,
+                    height: 200,
                   ),
-                ),
-                SizedBox(height: 20),
-                TextField(
-                  maxLength: 20,
-                  obscureText: true,
-                  decoration: InputDecoration(
-                      hintText: "Your password",
-                      border: OutlineInputBorder(),
-                      prefixIcon: Icon(Icons.lock)),
-                ),
-                SizedBox(height: 20),
-                TextField(
-                  maxLength: 20,
-                  keyboardType: TextInputType.number,
-                  decoration: InputDecoration(
-                      prefixText: "Rp.",
-                      prefixStyle: TextStyle(color: Colors.red, fontSize: 18),
-                      border: OutlineInputBorder(),
-                      prefixIcon: Icon(Icons.attach_money)),
-                ),
-              ],
-            ),
-          )),
+                  Text("Image from local", style: TextStyle(fontSize: 25)),
+                  Image(
+                    image: AssetImage("assets/girl.jpg"),
+                    width: 200,
+                    height: 200,
+                  )
+                ],
+              ))),
     );
   }
 }
